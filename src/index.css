@@ -1,0 +1,145 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #282c34;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+#root {
+  width: 100%;
+  max-width: 600px;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.game-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 80vh;
+  text-align: center;
+}
+
+.player-info {
+  padding: 10px 20px;
+  background-color: #4a5568;
+  border-radius: 8px;
+  width: 80%;
+}
+
+.game-area {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 1;
+  width: 100%;
+}
+
+.choices {
+  display: flex;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.choice-btn {
+  padding: 15px 25px;
+  font-size: 1.5rem;
+  background-color: #61dafb;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.choice-btn:hover {
+  background-color: #21a1f1;
+}
+
+.choice-btn:disabled {
+  background-color: #4a5568;
+  cursor: not-allowed;
+}
+
+.round-info {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.result-display {
+  font-size: 3rem;
+  margin: 20px 0;
+  min-height: 80px;
+}
+
+.result-display .vs {
+  font-size: 1.5rem;
+  margin: 0 20px;
+  color: #ccc;
+}
+
+.scores {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.score-card {
+  background-color: #4a5568;
+  padding: 10px 20px;
+  border-radius: 8px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 80%;
+}
+
+input, button {
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #4a5568;
+  background-color: #4a5568;
+  color: white;
+  font-size: 1rem;
+}
+
+button {
+  background-color: #61dafb;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+button:hover {
+  background-color: #21a1f1;
+}
+
+.menu-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 80%;
+}
+
+.error-message {
+  color: #fc8181;
+  margin-top: 10px;
+}
+
+.spectator-count {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #61dafb;
+}
