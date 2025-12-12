@@ -1,3 +1,4 @@
+// frontend/src/components/RoomCreatedPage.jsx
 import React from 'react';
 
 const RoomCreatedPage = ({ roomCode, playerName, players, onStartFirstRound }) => {
@@ -13,7 +14,7 @@ const RoomCreatedPage = ({ roomCode, playerName, players, onStartFirstRound }) =
       <div className="players-in-room">
         {players.map((player) => (
           <div key={player.id} className="player-info">
-            {player.name} {player.id === socket.id ? "(Anda)" : ""}
+            {player.name} {player.name === playerName ? "(Anda)" : ""}
           </div>
         ))}
       </div>
