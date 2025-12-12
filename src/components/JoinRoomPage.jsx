@@ -1,3 +1,4 @@
+// frontend/src/components/JoinRoomPage.jsx
 import React, { useState } from 'react';
 
 const JoinRoomPage = ({ isCreate, playerName, onSubmit, error }) => {
@@ -6,10 +7,13 @@ const JoinRoomPage = ({ isCreate, playerName, onSubmit, error }) => {
   const [isSpectator, setIsSpectator] = useState(false);
 
   const handleSubmit = (e) => {
-    e.preventDefault();
+    e.preventDefault(); // Mencegah reload halaman
+    console.log('Form disubmit. isCreate:', isCreate);
     if (isCreate) {
+      console.log('Mengirim emit createRoom dengan rounds:', rounds);
       onSubmit(playerName, rounds);
     } else {
+      console.log('Mengirim emit joinRoom dengan kode:', roomCode);
       onSubmit(playerName, roomCode.toUpperCase(), isSpectator);
     }
   };
@@ -49,6 +53,7 @@ const JoinRoomPage = ({ isCreate, playerName, onSubmit, error }) => {
             </div>
           </>
         )}
+        {/* Tombol ini bertipe 'submit' dan akan menjalankan fungsi handleSubmit */}
         <button type="submit">{isCreate ? 'Buat Room' : 'Join Room'}</button>
         {error && <p className="error-message">{error}</p>}
       </form>
